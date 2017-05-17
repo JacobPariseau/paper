@@ -1,0 +1,30 @@
+<nav>
+ <div class="nav-wrapper">
+   <a href="#" class="brand-logo">{{title}}</a>
+   <ul id="nav-large" class="right hide-on-med-and-down">
+      {{#if artist}}<li class="active">{{else}}<li>{{/if}}
+        <a href="#artist">My Profile</a>
+      </li>
+      {{#if home}}<li class="active">{{else}}<li>{{/if}}
+        <a href="#index">Home</a>
+      </li>
+      <li>
+        <a href="#createupdate">New Update</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav id="nav-small" class="hide-on-large-only">
+  <ul>
+    {{#if artist}}<li class="active">{{else}}<li>{{/if}}
+      <a href="#artist">My Profile</a>
+    </li>
+    {{#if home}}<li class="active">{{else}}<li>{{/if}}
+      <a href="#index">Home</a>
+    </li>
+    <li>
+      <a href="#createupdate">New Update</a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,22 @@
+@import "./components/materialize-src/sass/materialize.scss";
+
+body {
+	background: rgb(30,33,36);
+	padding-bottom: 4rem;
+}
+
+#nav-large {
+	padding: 0 $navbar-brand-font-size;
+}
+#nav-small {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+	ul {
+		display: flex;
+	}
+	li {
+    flex-grow: 1;
+    text-align: center;
+	}
+}

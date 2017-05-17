@@ -1,0 +1,43 @@
+<main class="paper">
+	{{#each (pages)}}
+		{{#if @first}}
+			{{#each questions}}
+				<div class="page page-{{../index}} current">
+					<header>
+						<h3 class="question-header">{{text}}</h3>
+					</header>
+					<ul class="samples">
+						{{#each samples}}
+							<li class="sample">
+								<i class="{{color}} darken-1">{{initial}}</i>
+								<span>{{name}}</span>
+							</li>
+						{{/each}}
+					</ul>
+					<input id="field-company" placeholder="{{short}}" type="text"/>
+				</div>
+			{{/each}}
+		{{else}}
+			{{#each questions}}
+				<div class="page page-{{../index}} next">
+					<header>
+						<h3 class="question-header">{{text}}</h3>
+					</header>
+					<input id="field-company" placeholder="{{short}}" type="text"/>
+				</div>
+			{{/each}}
+		{{/if}}
+	{{/each}}
+
+	<footer>
+		<a class="disabled" id="page-previous">
+			<i class="material-icons left">chevron_left</i>PREV
+		</a>
+		<a id="page-next">
+			<i class="material-icons right">chevron_right</i>NEXT
+		</a>
+	</footer>
+	<!--
+	{{> ./partials/choice-generic id="location" label="What location are you on?"}}
+	{{> ./partials/choice-generic id="supervisor" label="Who is the supervisor on site?"}} -->
+</main>
